@@ -3,6 +3,17 @@
 > *Dear Professor Rob Marano,*
 
 
+## Instruction Set Architecture
+
+Before writing any Verilog, we first needed to describe a somewhat
+rigorous Instruction Set Architecture (ISA).  Ideally, such an abstract
+model would exist before writing anything in a Hardware Description
+Language (HDL) since it serves as the basis for how software controls a
+Central Processing Unit (CPU).  Given that this was our first time
+designing a CPU from the ground up, much of the ISA was in constant flux
+as we slowly converged on our final design.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
