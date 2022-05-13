@@ -33,7 +33,7 @@ as we slowly converged on our final design.
 |    `LDB`    |  `D`   | `0b1100 XXXX` | Load byte            |
 |    `STB`    |  `D`   | `0b1101 XXXX` | Store byte           |
 |    `JMP`    |  `B`   | `0b1110 XXXX` | Jump                 |
-|    `JPL`    |  `B`   | `0b1111 XXXX` | Jumpy (with link)    |
+|    `JPL`    |  `B`   | `0b1111 XXXX` | Jump (with link)     |
 
 
 ## Copyright & Licensing
