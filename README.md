@@ -14,6 +14,63 @@ designing a CPU from the ground up, much of the ISA was in constant flux
 as we slowly converged on our final design.
 
 
+### Registers
+
+JAVK consists of 20 addressable registers.  Of these, 16 are 8-bit,
+while the remaining four are 16-bit.  Of these 16-bit registers, two map
+directly on top of two 8-bit registers allowing for manipulation using
+an 8-bit ALU.
+
+```
+Register Map:
+
++-------+-------+
+|   A   |   B   |
++-------+-------+
+|   C   |   D   |
++-------+-------+
+|   E   |   F   |
++-------+-------+
+|   G   |   H   |
++-------+-------+
+|   I   =   J   |
++-------+-------+
+|   K   =   L   |
++-------+-------+
+|   M   |   N   |
++-------+-------+
+|   O   |   Z   |
++-------+-------+
+|      P C      |
++-------+-------+
+|      S P      |
++-------+-------+
+```
+
+| Register |  Index   | Size  |
+| :------: | :------: | :---: |
+|   `A`    | `0b0000` | `8b`  |
+|   `B`    | `0b0001` | `8b`  |
+|   `C`    | `0b0010` | `8b`  |
+|   `D`    | `0b0011` | `8b`  |
+|   `E`    | `0b0100` | `8b`  |
+|   `F`    | `0b0101` | `8b`  |
+|   `G`    | `0b0110` | `8b`  |
+|   `H`    | `0b0111` | `8b`  |
+|   `I`    | `0b1000` | `8b`  |
+|   `J`    | `0b1001` | `8b`  |
+|   `K`    | `0b1010` | `8b`  |
+|   `L`    | `0b1011` | `8b`  |
+|   `M`    | `0b1100` | `8b`  |
+|   `N`    | `0b1101` | `8b`  |
+|   `O`    | `0b1110` | `8b`  |
+|   `Z`    | `0b1111` | `8b`  |
+|   `PC`   |  `0b00`  | `16b` |
+|   `SP`   |  `0b01`  | `16b` |
+|   `IJ`   |  `0b10`  | `16b` |
+|   `KL`   |  `0b11`  | `16b` |
+
+
 ### Core Instruction Set
 
 | Instruction | Format |   Encoding    |     Description      |
