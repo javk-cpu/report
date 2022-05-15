@@ -133,6 +133,20 @@ single byte where the high nibble corresponds to the opcode, and the
 lower nibble corresponds to the operand.
 
 
+##### Arithmetic Operations
+
+Arithmetic operations take up eight of the total 16 instructions
+available in JAVK and take up the `0b0XXX` address range.  By mapping
+the arithmetic operations to this address range, the lower three bits
+can be directly passed to the ALU's opcode input and enabled when the
+MSB of the opcode is a zero.
+
+For most operations, the operand corresponds to the register index of
+the second operand to the ALU.  The exceptions to this convention are
+the two logical shift operations, as they use the four bits to specify a
+shift amount for the value in the accumulator.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
