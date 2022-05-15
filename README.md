@@ -71,6 +71,31 @@ Register Map:
 |   `KL`   |  `0b11`  | `16b` |
 
 
+#### Special Registers
+
+* `A` - accumulator.  The result of all arithmetic operations reside in
+  this register.  This register is also used as the first operand for
+  all ALU operations (with exception of negation).  This register is
+  also the only register which can load and store data of the databus.
+* `F` - flags.  All modifiable and readable CPU flags reside in this
+  register.
+* `I` - high byte of the `IJ` register.
+* `J` - low byte of the `IJ` register.
+* `K` - high byte of the `KL` register.
+* `L` - low byte of the `KL` register.
+* `Z` - zero.  The zero register is always contains a constant value of
+  zero.  All writes to this register are discarded.
+* `PC` - program counter.  The program counter holds the address of the
+  next instruction to be executed.
+* `SP` - stack pointer.  The stack pointer stores the address of the
+  last program request in a stack.
+* `IJ` - intended jump.  The intended jump register serves two primary
+  roles: containing the address from where data is read to/written from
+  the `A` register or the address which execution should jump to.
+* `KL` - keep link.  Upon a jump with link (`JPL`), the `PC` register
+  will be incremented and stored in this register.
+
+
 ### Core Instruction Set
 
 | Instruction | Format |   Encoding    |     Description      |
