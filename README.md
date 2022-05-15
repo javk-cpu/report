@@ -185,6 +185,39 @@ register while the other writes the contents of the `A` register to the
 databus.
 
 
+##### Branch Operations
+
+The two branch operations take up the `0b0111X` address range.
+
+Both operations store the branch condition in the operand.  Both
+instructions branch to the address stored in the `IJ` register.  The
+main distinction between the two instructions is that `JPL` is a jump
+with a link.  On a branch, it stores the return address in the `KL` and
+the `SP` into the `IJ` register.  If the programmer sets the return
+flag, `SP` gets incremented by 16 instead of being decremented by 16.
+
+Condition codes:
+
+| Encoding | Alias |          Description           |        Flags        |
+| :------: | :---: | :----------------------------- | :-----------------: |
+| `0b0000` | `EQ`  | Equal                          |         `Z`         |
+| `0b0001` | `NE`  | Not equal                      |        `!Z`         |
+| `0b0010` | `HS`  | Unsigned greater than or equal |         `C`         |
+| `0b0011` | `LO`  | Unsigned less than             |        `!C`         |
+| `0b0100` | `MI`  | Negative                       |         `N`         |
+| `0b0101` | `PL`  | Positive or zero               |        `!N`         |
+| `0b0110` | `VS`  | Overflow set                   |         `V`         |
+| `0b0111` | `VC`  | Overflow clear                 |        `!V`         |
+| `0b1000` | `HI`  | Unsigned greater               |      `C && !Z`      |
+| `0b1001` | `LS`  | Unsigned less than or equal    |    `!(C && !Z)`     |
+| `0b1010` | `GE`  | Greater than or equal          |      `N == V`       |
+| `0b1011` | `LT`  | Less than                      |      `N != V`       |
+| `0b1100` | `GT`  | Greater than                   |   `!Z && (N == V)`  |
+| `0b1101` | `LE`  | Less than or equal             |  `!(!Z && (N == V)` |
+| `0b1110` | `AL`  | Always                         |         Any         |
+| `0b1111` | `NV`  | Always                         |         Any         |
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
