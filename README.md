@@ -164,6 +164,15 @@ with the destination register, and the low two bits correspond with the
 source register.
 
 
+##### Immediate Loading Operations
+
+The two immediate loading operations take up the `0b101X` address range.
+
+Both operations store the nibble as the operand.  The only distinction
+between the two operations is which nibble they replace in the `A`
+register.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
