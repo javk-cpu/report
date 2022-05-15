@@ -147,6 +147,23 @@ the two logical shift operations, as they use the four bits to specify a
 shift amount for the value in the accumulator.
 
 
+##### Movement Operations
+
+The two movement operations take up the `0b100X` address range.
+
+`MVA` (move `A`) is the first of the two movement operations and moves
+the contents of the `A` register to the specified operand register.  The
+only exception is the `Z` register which maintains the constant value of
+zero.
+
+`MVB` (move "big") is the second of the two movement operations and
+moves the contents of one 16-bit register to another.  Since there are
+only four 16-bit registers, this allows for specifying both a source and
+a destination register.  The high two bits of the operand correspond
+with the destination register, and the low two bits correspond with the
+source register.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
