@@ -173,6 +173,18 @@ between the two operations is which nibble they replace in the `A`
 register.
 
 
+##### Data Operations
+
+The two data operations take up the `0b0110X` address range.
+
+Both operations store an address offset in the operand.  The operations
+always add the unsigned offset to the address in the `IJ` register.
+Both set the address bus to the newly computed address, with the only
+distinction between the two is that one reads the databus into the `A`
+register while the other writes the contents of the `A` register to the
+databus.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
