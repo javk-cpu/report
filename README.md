@@ -14,6 +14,14 @@ designing a CPU from the ground up, much of the ISA was in constant flux
 as we slowly converged on our final design.
 
 
+### Inspiration
+
+Inspiration for JAVK came from the GameBoy's LR35902 and the MOS
+Technology 6502.  We most heavily borrowed on the idea of an accumulator
+as this allowed us to squeeze all our instructions into a single byte,
+avoiding the need for variable-length instructions.
+
+
 ### Registers
 
 JAVK consists of 20 addressable registers.  Of these, 16 are 8-bit,
