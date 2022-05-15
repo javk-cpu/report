@@ -126,6 +126,13 @@ Register Map:
 |    `JPL`    |  `B`   | `0b1111 XXXX` | Jump (with link)     |
 
 
+#### Instruction Encoding
+
+As the table above would suggest, all instructions in JAVK consist of a
+single byte where the high nibble corresponds to the opcode, and the
+lower nibble corresponds to the operand.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
