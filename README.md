@@ -282,6 +282,12 @@ the flags register and place the return address into the `IJ` register.
 ![B-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/b-format-waveform.png)
 
 
+### Schematic
+
+
+![Schematic](https://media.githubusercontent.com/media/javk-cpu/media/master/schematic.jpg)
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
