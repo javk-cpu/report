@@ -24,8 +24,8 @@ avoiding the need for variable-length instructions.
 
 ### Arithmetic Logic Unit
 
-JAVK has an 8-bit Arithmetic Logic Unit (ALU) that supports the following
-operations:
+JAVK has an 8-bit Arithmetic Logic Unit (ALU) that supports the
+following operations:
 * adding
 * subtracting
 * negation
@@ -41,8 +41,8 @@ The ALU also has the following output flags:
 * carry (C)
 * overflow (V)
 
-On a rising clock edge, the ALU performs the configured operation and updates
-the output and flags accordingly.
+On a rising clock edge, the ALU performs the configured operation and
+updates the output and flags accordingly.
 
 
 ### Registers
