@@ -241,6 +241,33 @@ Condition codes:
 | `0b1111` | `NV`  | Always                         |         Any         |
 
 
+### Calling Convention
+
+When branching into a subroutine, the `A`, `B`, `C`, `D`, `E`, `G`, and
+`H` registers serve as argument registers.  If more than seven registers
+are needed, the address to a region in memory where additional arguments
+reside should be moved into the `G` and `H` registers; the `G` register
+should contain the high byte, and the `H` register should contain the
+low byte.
+
+The return value should be placed in the `A` register.  If a 16-bit
+value is to be returned, the high byte should be placed in the `A`
+register, while the low byte should be placed in the `B` register.  If
+the return value is larger than 16-bits, the caller should follow the
+same convention as done with `G` and `H` if there are too many
+arguments, but place the segment of memory where the return value should
+reside before any additional arguments.
+
+When entering a subroutine, the `KL` register contains the return
+address and `IJ` contains the address of `SP`, this allows for the
+programmer to backup any registers as they seem fit.  While in a
+subroutine, the `M`, `N`, and `O` registers must be saved before use.
+
+To return from a subroutine, the programmer must set the return flag in
+the flags register and place the return address into the `IJ` register.
+
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
