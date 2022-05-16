@@ -282,6 +282,16 @@ the flags register and place the return address into the `IJ` register.
 ![B-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/b-format-waveform.png)
 
 
+### Data Path
+
+All instructions take one clock cycle to execute.  On the falling edge,
+an instruction is fetched into the processor and decoded internally.
+The controller then decodes the instruction and primes all internal
+components for the rising clock edge.  Once the rising clock edge is
+detected, the instruction is executed, and the result is written to the
+appropriate location.
+
+
 ### Schematic
 
 
