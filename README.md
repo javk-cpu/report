@@ -22,6 +22,29 @@ as this allowed us to squeeze all our instructions into a single byte,
 avoiding the need for variable-length instructions.
 
 
+### Arithmetic Logic Unit
+
+JAVK has an 8-bit Arithmetic Logic Unit (ALU) that supports the following
+operations:
+* adding
+* subtracting
+* negation
+* bitwise and
+* bitwise inclusive or
+* bitwise exclusive or
+* logical shifts left
+* logical shifts right
+
+The ALU also has the following output flags:
+* negative (N)
+* zero (Z)
+* carry (C)
+* overflow (V)
+
+On a rising clock edge, the ALU performs the configured operation and updates
+the output and flags accordingly.
+
+
 ### Registers
 
 JAVK consists of 20 addressable registers.  Of these, 16 are 8-bit,
