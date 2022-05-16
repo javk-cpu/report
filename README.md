@@ -267,6 +267,20 @@ To return from a subroutine, the programmer must set the return flag in
 the flags register and place the return address into the `IJ` register.
 
 
+### Timings
+
+`R`-type format:
+![R-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/r-format-waveform.png)
+
+`I`-type format:
+![I-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/i-format-waveform.png)
+
+`D`-type format:
+![D-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/d-format-waveform.png)
+
+`B`-type format:
+![B-type format](https://media.githubusercontent.com/media/javk-cpu/media/master/b-format-waveform.png)
+
 
 ## Copyright & Licensing
 
